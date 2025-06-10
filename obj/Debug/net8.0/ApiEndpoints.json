@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "CepApi.Controllers.CepController",
+    "Method": "Get",
+    "RelativePath": "api/Cep/{cep}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cep",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

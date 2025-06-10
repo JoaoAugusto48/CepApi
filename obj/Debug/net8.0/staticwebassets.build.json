@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "8wFnprxCQ3iywbb9Pnaw6jwrrKFCysDZSUscPLGIjp8=",
+  "Source": "CepApi",
+  "BasePath": "_content/CepApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
