@@ -1,4 +1,4 @@
-﻿namespace CepApi.Models;
+﻿namespace CepApi.Data;
 
 public class ViaCepResponse
 {

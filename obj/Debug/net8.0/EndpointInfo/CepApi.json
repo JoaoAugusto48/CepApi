@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Cep/{cep}": {
+    "/api/Address/{cep}": {
       "get": {
         "tags": [
-          "Cep"
+          "Address"
         ],
         "parameters": [
           {

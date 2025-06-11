@@ -6,11 +6,11 @@ namespace CepApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class CepController : ControllerBase
+public class AddressController : ControllerBase
 {
     private readonly ICepService _cepService;
 
-    public CepController(ICepService cepService)
+    public AddressController(ICepService cepService)
     {
         _cepService = cepService;
     }

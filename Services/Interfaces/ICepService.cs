@@ -1,4 +1,4 @@
-﻿using CepApi.Models;
+﻿using CepApi.Data;
 
 namespace CepApi.Services.Interfaces;
 

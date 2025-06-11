@@ -1,7 +1,26 @@
+using CepApi.Data;
 using CepApi.Services;
 using CepApi.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Config Database Connection
+var connectionString = builder.Configuration.GetConnectionString("FilmeConnection");
+
+builder.Services.AddDbContext<AddressContext>(opts =>
+    opts.UseLazyLoadingProxies().UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+builder.Services.
+    AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+// Config to access API 
+var cepConfig = builder.Configuration.GetSection("CepService");
+builder.Services.AddHttpClient<ICepService, ViaCepService>(client =>
+{
+    client.BaseAddress = new Uri(cepConfig["BaseUrl"]);
+});
+
 
 // Add services to the container.
 
@@ -10,11 +29,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var cepConfig = builder.Configuration.GetSection("CepService");
-builder.Services.AddHttpClient<ICepService, ViaCepService>(client =>
-{
-    client.BaseAddress = new Uri(cepConfig["BaseUrl"]);
-});
 
 var app = builder.Build();
 

@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "CepApi.Controllers.CepController",
+    "ContainingType": "CepApi.Controllers.AddressController",
     "Method": "Get",
-    "RelativePath": "api/Cep/{cep}",
+    "RelativePath": "api/Address/{cep}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
